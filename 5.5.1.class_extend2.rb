@@ -1,11 +1,9 @@
 module MyModule
-  def my_method; 'good evening'; end
+  def my_method; 'good morning'; end
 end
 
 class MyClass
-  class << self
-    include MyModule
-  end
+  extend MyModule
 end
 
-puts MyClass.my_method #=> "good evening"
+puts MyClass.my_method #=> "good morning"
